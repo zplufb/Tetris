@@ -79,33 +79,12 @@ button{
 </style>
 <script>
 
-function Counter(){
-
-	if(typeof(Storage)!=="undefined"){
-		
-		var num = localStorage.getItem("pageviews");
-
-		if (num != null){
-			localStorage.setItem("pageviews", Number(num) + 1);
-		}else{
-			localStorage.setItem("pageviews", 1);
-			num = 1;
-		}
-
-		document.getElementById("counter").innerHTML="PageViews: " + num;
-	}else{
-		document.getElementById("counter").innerHTML="Sorry, Your browser is unable to support web storage";
-	}
-}
-
 function ShowRecordsList(){
-
 	
 	var userNameList="";
 	var scoreList="";
 	var localStorageArr = [];
 	var sortedArr = [];
-
 	
 	for(var i = 0; i < localStorage.length - 2; i++){
 		if(localStorage.getItem(i) != null){
@@ -206,7 +185,6 @@ function InitLocalOrSessionData(){
 	}
 	//
 	ShowRecordsList();
-	Counter();
 
 	//Save UserName in one session
 	var currKey;
@@ -604,7 +582,7 @@ function Types(){
 typeObj.aa = [[1,1,1,1],[0,0,0,0],[0,0,0,0],[0,0,0,0]];//----
 typeObj.ab = [[1,0,0,0],[1,0,0,0],[1,0,0,0],[1,0,0,0]];//clockwise rotate 90 degree
 
-typeObj.ba = [[1,1,0,0],[1,1,0,0],[0,0,0,0],[0,0,0,0]];//Ìï
+typeObj.ba = [[1,1,0,0],[1,1,0,0],[0,0,0,0],[0,0,0,0]];//ç”°
 
 typeObj.ca = [[1,1,0,0],[0,1,1,0],[0,0,0,0],[0,0,0,0]];//z
 typeObj.cb = [[0,1,0,0],[1,1,0,0],[1,0,0,0],[0,0,0,0]];//clockwise rotate 90 degree
@@ -1187,15 +1165,6 @@ function eraseCurTypeUI(){
 
 }
 
-/*function updateLeaderboardsHeihgt(){
-	var maxMainDivHeight = $('#left').height() > $('#right').height() ? $('#left').height() : $('#right').height();
-	$('.leaderboards').css('height',maxMainDivHeight);
-}
-
-$(window).resize(function(){
-	updateLeaderboardsHeihgt()
-});
-*/
 </script>
 
 
@@ -1239,10 +1208,5 @@ $(window).resize(function(){
 	</div>
 </div>
 </div>
-<div style="clear:both"></div>
-<div id="counter"></div>
-<div style="clear:both"></div>
-<div style="float:left; "><a href="http://www.cnblogs.com/fanbi/">www.cnblogs.com/fanbi</div>
-
 </body>
 </html>

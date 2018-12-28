@@ -5,4 +5,4 @@ A Tetris Game base on JQuery
 
 ![image](https://github.com/zplufb/Tetris/blob/master/Tetris_snapshot.png)
 
-You can play it [online](www.unionline.top/html/tetris/) 
+You can play it at: www.unionline.top/html/tetris/
